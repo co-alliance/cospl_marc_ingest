@@ -1,0 +1,33 @@
+# config file for script cospl-IngestTool.pl  used for processing: MARCXML
+# date config file
+## created  2013-0501
+## last updated: 2013-0501-1630
+
+#### local settings to configure
+##       variables of fedora server, port, username, and password
+$ServerName     = "http://fedora.coalliance.org";
+$ServerPort     = "8080";
+$UserName       = "fedoraAdmin";
+$PassWord       = 'PASSWORD';
+
+$fedoraNamespace    = "co";
+
+### content model name 
+$contentModel       = "co:coPublications";
+
+### collection info
+$collectionPID      = "co:3";
+
+### query
+$xPathQueryForDatastream =  q!//marc:datafield[@tag='856']/marc:subfield[@code='u']/text()! ; 
+
+#### locations of  Local Files
+# location of files to attach -testing
+$datastreamsDir     = "/home/username/coIngestTool";    
+$dataStreamLocation = "/home/username/coIngestTool"  . "/";
+$completedDirectory = "/home/username/coIngestTool/completed/";
+$logDirectory       = "/home/username/coIngestTool/logs/";
+$ingestLogPrefix    = "ingest";    # log prefix
+$errorLogPrefix     = "error";      # error log prefix
+
+## end of configuration section
